@@ -46,18 +46,18 @@ INFORMATIONS ET RECOMMANDATIONS
 - La recherche par identifiant donne le nom, les prénoms et les notes de l'élève
 - La recherche par nom donne l'identifiant de l'élève
 - Les coefficients pour les matières sont :
-    Mathématiques : 6
-    Physique, Chimie et Technologie : 5
-    Sciences de la Vie et de la Terre : 2
-    Français : 2
-    Histoire-Géographie : 2
-    Anglais : 2
-    Philosophie : 2
-    Sport : 1
+    - Mathématiques : 6
+    - Physique, Chimie et Technologie : 5
+    - Sciences de la Vie et de la Terre : 2
+    - Français : 2
+    - Histoire-Géographie : 2
+    - Anglais : 2
+    - Philosophie : 2
+    - Sport : 1
 
 
 
 
     AUTEUR
-    
+
     LOKONHOUNDE Max-Steven Mahuna
