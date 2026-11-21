@@ -3,13 +3,21 @@
 
 #define MAX_ELEVE 100
 
+#define COEFF_MATH 6
+#define COEFF_PCT 5
+#define COEFF_SVT 2
+#define COEFF_FRANCAIS 2
+#define COEFF_HISTGEO 2
+#define COEFF_ANGLAIS 2
+#define COEFF_PHILOSOPHIE 2
+#define COEFF_SPORT 1
+
 
 typedef struct {
     double note_1 ;
     double note_2 ;
     double note_3 ;
     double note_4 ;
-    int coefficient ;
 } Mathematiques ;
 
 
@@ -18,7 +26,6 @@ typedef struct {
     double note_2 ;
     double note_3 ;
     double note_4 ;
-    int coefficient ;
 } Pct ;
 
 
@@ -27,7 +34,6 @@ typedef struct {
     double note_2 ;
     double note_3 ;
     double note_4 ;
-    int coefficient ;
 } Français ;
 
 
@@ -36,7 +42,6 @@ typedef struct {
     double note_2 ;
     double note_3 ;
     double note_4 ;
-    int coefficient ;
 } Histgeo ;
 
 
@@ -45,7 +50,6 @@ typedef struct {
     double note_2 ;
     double note_3 ;
     double note_4 ;
-    int coefficient ;
 } Sport ;
 
 
@@ -54,7 +58,6 @@ typedef struct {
     double note_2 ;
     double note_3 ;
     double note_4 ;
-    int coefficient ;
 } Philosophie ;
 
 
@@ -63,7 +66,6 @@ typedef struct {
     double note_2 ;
     double note_3 ;
     double note_4 ;
-    int coefficient ;
 } Svt ;
 
 
@@ -72,7 +74,6 @@ typedef struct {
     double note_2 ;
     double note_3 ;
     double note_4 ;
-    int coefficient ;
 } Anglais ;
 
 
@@ -100,31 +101,31 @@ typedef struct {
 
 void ajouteleve (Eleve eleve[]) ;
 
-void ajoutnote (Eleve eleve[]) ;
+void ajoutnote (Eleve eleve[] , int a) ;   /*utilise rech*/
 
 void affichalleleve (Eleve eleve[]) ;
 
 void searcheleve (Eleve eleve[]) ;
 
-void suppeleve(Eleve eleve[]) ;
+void suppeleve(Eleve eleve[] , int a) ;  /*utilise rech*/
 
 void suppalleleve(Eleve eleve[]) ;
 
-void affichmoyinterro(Eleve eleve[]) ;
+void affichmoyinterro(Eleve eleve[] , int b) ;
 
-void affichmoymat(Eleve eleve[]) ;
+void affichmoymat(Eleve eleve[] , int b) ;
 
-void affichmoygen(Eleve eleve[]) ;
+void affichmoygen(Eleve eleve[] , int b) ;
 
 void classer(Eleve eleve[]) ;
 
 void affichnbreleve(Eleve eleve[]) ;
 
-double moyinterro(Eleve eleve[]) ;
+double moyinterro(Eleve eleve[] , int a) ;  /*utilise rech*/
 
-double moymat(Eleve eleve[]) ;
+double moymat(Eleve eleve[] , int a) ;   /*utilise rech*/
 
-double moygen(Eleve eleve[] , int a) ;
+double moygen(Eleve eleve[] , int a) ;  /*utilise rech*/
 
 int searchid(Eleve eleve[] , int a) ;
 

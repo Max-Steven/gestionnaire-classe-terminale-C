@@ -9,7 +9,7 @@
 
 void saveclasse(Eleve eleve[], int nombre) {
 
-    FILE *fichier = fopen("data/eleve.dat", "wb");
+    FILE *fichier = fopen("eleve.dat", "wb");
 
     if (fichier == NULL) {
         printf("Erreur lors de l'ouverture du fichier.\n");
@@ -31,7 +31,7 @@ void saveclasse(Eleve eleve[], int nombre) {
 
 int chargeclasse(Eleve eleve[]) {
 
-    FILE *fichier = fopen("data/eleve.dat", "rb");
+    FILE *fichier = fopen("eleve.dat", "rb");
 
     int nombre = 0;
 

@@ -10,21 +10,12 @@
 
 int main() {
 
-    int a, b, c, d ;
+    int b, c, d ;
 
     Eleve eleve[MAX_ELEVE] ;
 
-    for(a = 0 ; a < MAX_ELEVE ; a++) {
-        eleve[a].id = 0 ;
-        eleve[a].mathematiques.coefficient = 6 ;
-        eleve[a].pct.coefficient = 5 ;
-        eleve[a].svt.coefficient = 2 ;
-        eleve[a].français.coefficient = 2 ;
-        eleve[a].histgeo.coefficient = 2 ;
-        eleve[a].anglais.coefficient = 2 ;
-        eleve[a].philosophie.coefficient = 2 ;
-        eleve[a].sport.coefficient = 1 ;
-        
+    for(d = 0 ; d < MAX_ELEVE ; d++) {
+        eleve[d].id = 0 ;
     }
 
 

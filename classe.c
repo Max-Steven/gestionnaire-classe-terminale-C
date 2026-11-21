@@ -58,7 +58,13 @@ int compteleve(Eleve eleve[]) {
 void affichnbreleve (Eleve eleve[]) {
     int a = compteleve(eleve) ;
 
-    printf("Il y a %d élèves enregistrés dans le système \n",a);
+    if(a == 0){
+        printf("Il n'y a aucun élève enregistré dans le système \n");
+    }
+
+    else {
+        printf("Il y a %d élèves enregistrés dans le système \n",a);
+    }
 
 }
 
@@ -92,7 +98,7 @@ void ajouteleve(Eleve eleve[]) {
                 scanf("%d",&a) ;
                 viderbuffer() ;
 
-            } while(searchid(eleve , a) == 0) ;
+            } while(searchid(eleve , a) == 1 || a == 0) ;
         } 
 
         printf("Veuillez entrer le nom de l'élève \n");
@@ -120,12 +126,12 @@ void ajouteleve(Eleve eleve[]) {
 
 
 
-void suppeleve(Eleve eleve[]) {
+void suppeleve(Eleve eleve[], int a) {
 
-    int a, b, d ;
-    int c = compteleve(eleve) ;
+    int b ;
+    
 
-    a = recheleve(eleve) ;
+    
 
     eleve[a].id = 0 ;
 
@@ -145,8 +151,8 @@ void suppeleve(Eleve eleve[]) {
 
 
 
-void ajoutnote(Eleve eleve[]) {
-    int a, e ;
+void ajoutnote(Eleve eleve[] , int a) {
+    int e ;
 
     int f, g, h, i, j, k, l, m ;
     double f1, f2, f3, f4 ;
@@ -157,9 +163,7 @@ void ajoutnote(Eleve eleve[]) {
     double k1, k2, k3, k4 ;
     double l1, l2, l3, l4 ;
     double m1, m2, m3, m4 ;
-    
-    
-    a = recheleve(eleve) ;
+
 
 
         
@@ -1064,6 +1068,7 @@ void suppalleleve(Eleve eleve[]) {
 
 void searcheleve(Eleve eleve[]) {
     int a, b, d ;
+    int f = 0 ;
     int e = compteleve(eleve) ;
     char c[100] ;
 
@@ -1079,61 +1084,65 @@ void searcheleve(Eleve eleve[]) {
 
         case 1:
             b = recheleve(eleve) ;
-            printf("Identifiant : %d \n",eleve[b].id);
-            printf("Nom et prénoms : %s %s \n\n\n",eleve[b].nom, eleve[b].prenom);
+
+            if(b != -1) {
 
 
-            printf("Notes \n\n");
+                printf("Notes \n\n");
 
-            printf("Mathématiques \n");
-            printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].mathematiques.note_1);
-            printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].mathematiques.note_2);
-            printf("Note du semi-devoir : %.2lf \n", eleve[b].mathematiques.note_3);
-            printf("Note du devoir : %.2lf \n\n", eleve[b].mathematiques.note_4);
+                printf("Mathématiques \n");
+                printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].mathematiques.note_1);
+                printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].mathematiques.note_2);
+                printf("Note du semi-devoir : %.2lf \n", eleve[b].mathematiques.note_3);
+                printf("Note du devoir : %.2lf \n\n", eleve[b].mathematiques.note_4);
 
-            printf("Physique, Chimie et Technologie \n");
-            printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].pct.note_1);
-            printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].pct.note_2);
-            printf("Note du semi-devoir : %.2lf \n", eleve[b].pct.note_3);
-            printf("Note du devoir : %.2lf \n\n", eleve[b].pct.note_4);
+                printf("Physique, Chimie et Technologie \n");
+                printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].pct.note_1);
+                printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].pct.note_2);
+                printf("Note du semi-devoir : %.2lf \n", eleve[b].pct.note_3);
+                printf("Note du devoir : %.2lf \n\n", eleve[b].pct.note_4);
 
-            printf("Sciences de la Vie et de la Terre \n");
-            printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].svt.note_1);
-            printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].svt.note_2);
-            printf("Note du semi-devoir : %.2lf \n", eleve[b].svt.note_3);
-            printf("Note du devoir : %.2lf \n\n", eleve[b].svt.note_4);
+                printf("Sciences de la Vie et de la Terre \n");
+                printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].svt.note_1);
+                printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].svt.note_2);
+                printf("Note du semi-devoir : %.2lf \n", eleve[b].svt.note_3);
+                printf("Note du devoir : %.2lf \n\n", eleve[b].svt.note_4);
 
-            printf("Français \n");
-            printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].français.note_1);
-            printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].français.note_2);
-            printf("Note du semi-devoir : %.2lf \n", eleve[b].français.note_3);
-            printf("Note du devoir : %.2lf \n\n", eleve[b].français.note_4);
+                printf("Français \n");
+                printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].français.note_1);
+                printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].français.note_2);
+                printf("Note du semi-devoir : %.2lf \n", eleve[b].français.note_3);
+                printf("Note du devoir : %.2lf \n\n", eleve[b].français.note_4);
 
-            printf("Histoire et Géographie \n");
-            printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].histgeo.note_1);
-            printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].histgeo.note_2);
-            printf("Note du semi-devoir : %.2lf \n", eleve[b].histgeo.note_3);
-            printf("Note du devoir : %.2lf \n\n", eleve[b].histgeo.note_4);
+                printf("Histoire et Géographie \n");
+                printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].histgeo.note_1);
+                printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].histgeo.note_2);
+                printf("Note du semi-devoir : %.2lf \n", eleve[b].histgeo.note_3);
+                printf("Note du devoir : %.2lf \n\n", eleve[b].histgeo.note_4);
 
-            printf("Anglais \n");
-            printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].anglais.note_1);
-            printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].anglais.note_2);
-            printf("Note du semi-devoir : %.2lf \n", eleve[b].anglais.note_3);
-            printf("Note du devoir : %.2lf \n\n", eleve[b].anglais.note_4);
+                printf("Anglais \n");
+                printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].anglais.note_1);
+                printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].anglais.note_2);
+                printf("Note du semi-devoir : %.2lf \n", eleve[b].anglais.note_3);
+                printf("Note du devoir : %.2lf \n\n", eleve[b].anglais.note_4);
 
-            printf("Philosophie \n");
-            printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].philosophie.note_1);
-            printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].philosophie.note_2);
-            printf("Note du semi-devoir : %.2lf \n", eleve[b].philosophie.note_3);
-            printf("Note du devoir : %.2lf \n\n", eleve[b].philosophie.note_4);
+                printf("Philosophie \n");
+                printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].philosophie.note_1);
+                printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].philosophie.note_2);
+                printf("Note du semi-devoir : %.2lf \n", eleve[b].philosophie.note_3);
+                printf("Note du devoir : %.2lf \n\n", eleve[b].philosophie.note_4);
 
-            printf("Sport \n");
-            printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].sport.note_1);
-            printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].sport.note_2);
-            printf("Note du semi-devoir : %.2lf \n", eleve[b].sport.note_3);
-            printf("Note du devoir : %.2lf \n\n\n", eleve[b].sport.note_4);
+                printf("Sport \n");
+                printf("Note de l'interrogation 1 : %.2lf \n", eleve[b].sport.note_1);
+                printf("Note de l'interrogation 2 : %.2lf \n", eleve[b].sport.note_2);
+                printf("Note du semi-devoir : %.2lf \n", eleve[b].sport.note_3);
+                printf("Note du devoir : %.2lf \n\n\n", eleve[b].sport.note_4);
 
-            break;
+                
+
+            }
+
+            break ;
 
 
 
@@ -1146,12 +1155,18 @@ void searcheleve(Eleve eleve[]) {
             c[strcspn(c,"\n")] = '\0' ;
 
             for(d = 0 ; d < e ; d++) {
-                if(strcasecmp(c , eleve[d].nom) == 0) {
+                if( (strcasecmp(c , eleve[d].nom) == 0) && eleve[d].id != 0 ) {
+                    printf("\n______________________________________________\n\n");
                     printf("Nom et prénoms : %s %s \n",eleve[d].nom, eleve[d].prenom);
                     printf("Identifiant : %d \n",eleve[d].id);
-                    printf("______________________________________________\n\n");
+                    f += 1 ;
 
                 }
+            }
+
+
+            if(f = 0 ) {
+                printf("Cet élève n'a pas été enregistré \n\n");
             }
 
             break ;
@@ -1181,32 +1196,62 @@ int recheleve(Eleve eleve[]) {
     int c = compteleve(eleve) ;
 
     printf("Veuillez entrer l'identifiant de l'élève \n");
+    printf("Tapez \"-1\" pour quitter \n");
     scanf("%d",&a);
     viderbuffer() ;
 
-    if(searchid(eleve , a) == 0) {
-        do{
-            printf("Cet identifiant n'existe pas \n");
-            printf("Veuillez entrer l'identifiant de l'élève \n");
-            scanf("%d",&a);
-            viderbuffer() ;
-            
-        } while (searchid(eleve , a) == 0) ;
-
+    if (a == -1) {
+        printf("Aurevoir \n");
+        return a ;
     }
 
-    
-    for(b = 0 ; b < c ; b++) {
-        if(eleve[b].id == a) {
-            printf("Identifiant : %d \n",eleve[a].id);
-            printf("Nom et prénoms : %s %s \n", eleve[b].nom, eleve[b].prenom);
-            break ;
+
+    else {
+
+        if(searchid(eleve , a) == 0) {
+            do{
+
+                if(a == -1) {
+                    printf("Aurevoir \n");
+                    break ;
+                
+                }
+
+                else {
+                    printf("Cet identifiant n'existe pas \n\n");
+                    printf("Veuillez entrer l'identifiant de l'élève \n");
+                    printf("Tapez \"-1\" pour quitter \n");
+                    scanf("%d",&a);
+                    viderbuffer() ;
+                }
+                
+            } while (searchid(eleve , a) == 0 ) ;
+
         }
+
+
+        if(a == -1) {
+            return a ;
+        }
+
+
+        else {
+            for(b = 0 ; b < c ; b++) {
+                if(eleve[b].id == a) {
+                    printf("Identifiant : %d \n",eleve[b].id);
+                    printf("Nom et prénoms : %s %s \n\n\n", eleve[b].nom, eleve[b].prenom);
+                    break ;
+                }
+            }
+
+
+            return b ;
+
+        }
+    
+
     }
 
-
-    return b ;
-    
 
 }
 
@@ -1214,10 +1259,10 @@ int recheleve(Eleve eleve[]) {
 
 
 
-double moyinterro(Eleve eleve[]) {
-    int a, b ;
+double moyinterro(Eleve eleve[] , int a) {
+    int b ;
     double c ;
-    a = recheleve(eleve) ;
+   
 
     printf("1. Mathématiques \n");
     printf("2. Physique, Chimie et Technologie \n");
@@ -1368,13 +1413,17 @@ double moyinterro(Eleve eleve[]) {
 
 
 
-void affichmoyinterro(Eleve eleve[]) {
+void affichmoyinterro(Eleve eleve[] , int b) {
     double a ;
-    a = moyinterro(eleve) ;
+
+    
+    a = moyinterro(eleve , b) ;
 
     if(a != 0) {
         printf("La moyenne des interrogations dans la matière pour cet élève est %.2lf", a) ;
     }
+    
+        
 
 }
 
@@ -1382,10 +1431,10 @@ void affichmoyinterro(Eleve eleve[]) {
 
 
 
-double moymat(Eleve eleve[]) {
-    int a, b ;
+double moymat(Eleve eleve[] , int a) {
+    int b ;
     double c, d, e ;
-    a = recheleve(eleve) ;
+    
 
     printf("1. Mathématiques \n");
     printf("2. Physique, Chimie et Technologie \n");
@@ -1552,13 +1601,18 @@ double moymat(Eleve eleve[]) {
 
 
 
-void affichmoymat(Eleve eleve[]) {
+void affichmoymat(Eleve eleve[] , int b) {
+
     double a ;
-    a = moymat(eleve) ;
+    
+    a = moymat(eleve , b) ;
 
     if(a != 0) {
         printf("La moyenne de cet élève dans la matiére est : %.2lf \n " ,a);
     }
+
+
+   
 
 }
 
@@ -1646,11 +1700,11 @@ double moygen(Eleve eleve[] , int a) {
 
 
 
-        s = k*eleve[a].mathematiques.coefficient + l*eleve[a].pct.coefficient + m*eleve[a].svt.coefficient + n*eleve[a].français.coefficient ;
-        t = o*eleve[a].histgeo.coefficient + p*eleve[a].anglais.coefficient + q*eleve[a].philosophie.coefficient + r*eleve[a].sport.coefficient ;
+        s = k*COEFF_MATH + l*COEFF_PCT + m*COEFF_SVT + n*COEFF_FRANCAIS ;
+        t = o*COEFF_HISTGEO + p*COEFF_ANGLAIS + q*COEFF_PHILOSOPHIE + r*COEFF_SPORT ;
 
-        u = eleve[a].mathematiques.coefficient + eleve[a].pct.coefficient + eleve[a].svt.coefficient + eleve[a].français.coefficient ;
-        v = eleve[a].histgeo.coefficient + eleve[a].anglais.coefficient + eleve[a].philosophie.coefficient + eleve[a].sport.coefficient ;
+        u = COEFF_MATH + COEFF_PCT + COEFF_SVT + COEFF_FRANCAIS ;
+        v = COEFF_HISTGEO + COEFF_ANGLAIS + COEFF_PHILOSOPHIE + COEFF_SPORT ;
 
         x = ( (s + t) / (u + v) ) ;
 
@@ -1672,22 +1726,26 @@ double moygen(Eleve eleve[] , int a) {
 
 
 
-void affichmoygen(Eleve eleve[]) {
+void affichmoygen(Eleve eleve[] , int b) {
 
     double a ;
-    int b ;
 
-    b = recheleve(eleve) ;
 
+
+    
     a = moygen(eleve , b) ;
 
     if(a != 0) {
-        printf("La moyenne générale de cet élève est %.2lf \n", a);
+        printf("La moyenne générale de cet élève est : %.2lf \n" ,a);
     }
 
     else {
         printf("Toutes les notes de cet élève n'ont pas encore été enregistrées \n\n");
+
     }
+
+    
+
 
 
 }
@@ -1714,7 +1772,7 @@ void classer(Eleve eleve[]) {
 
 
     if(b >= 1) {
-        printf("Les notes de tous les élèves n'ont pas encore été enregistrées \n");
+        printf("Les notes de tous les élèves n'ont pas encore été enregistrées \n\n\n");
     }
 
 

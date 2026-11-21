@@ -11,7 +11,7 @@ void menueleve(Eleve eleve[]) {
     int a ;
 
     do {
-        printf("1. Ajouter un élève \n");
+        printf("\n\n\n1. Ajouter un élève \n");
         printf("2. Compter les élèves \n");
         printf("3. Rechercher un élève \n");
         printf("4. Afficher tous les élèves \n");
@@ -46,9 +46,9 @@ void menueleve(Eleve eleve[]) {
 
             case 5:
                 printf("Aurevoir \n\n\n");
+                break;
 
-
-            
+    
             default:
                 printf("Saisie invalide \n\n");
                 break;
@@ -68,62 +68,74 @@ void menueleve(Eleve eleve[]) {
 
 
 void menunote(Eleve eleve[]) {
-    int a ;
+    int a, b ;
+
+
+    b = recheleve(eleve) ;
 
 
 
-    do {
-        printf("1. Ajouter une note \n");
-        printf("2. Afficher la moyenne des interrogations \n");
-        printf("3. Afficher la moyenne dans la matière \n");
-        printf("4. Afficher la moyenne générale \n");
-        printf("5. Quitter \n");
+    if(b != -1) {
 
 
-        printf("Tapez le numéro de l'action à effectuer \n");
-        scanf("%d",&a);
-        viderbuffer() ;
 
-
-        switch (a) {
-        
-            case 1:
-                ajoutnote(eleve) ;
-                break;
-
-
-            case 2:
-                affichmoyinterro(eleve) ;
-                break ;
-
-
-            case 3:
-                affichmoymat(eleve) ;
-                break ;
-
-
-            case 4:
-                affichmoygen(eleve) ;
-                break ;
-
-
-            case 5:
-                printf("Aurevoir \n\n\n");
-                break ;
+        do {
+            printf("\n\n\n1. Ajouter une note \n");
+            printf("2. Afficher la moyenne des interrogations \n");
+            printf("3. Afficher la moyenne dans la matière \n");
+            printf("4. Afficher la moyenne générale \n");
+            printf("5. Quitter \n");
 
 
             
-            default:
-                printf("Saisie invalide \n\n\n");
-                break;
+
+            printf("Tapez le numéro de l'action à effectuer \n");
+            scanf("%d",&a);
+            viderbuffer() ;
+
+
+            switch (a) {
+            
+                case 1:
+                    ajoutnote(eleve , b) ;
+                    break;
+
+
+                case 2:
+                    affichmoyinterro(eleve , b) ;
+                    break ;
+
+
+                case 3:
+                    affichmoymat(eleve , b) ;
+                    break ;
+
+
+                case 4:
+                    affichmoygen(eleve , b) ;
+                    break ;
+
+
+                case 5:
+                    printf("Aurevoir \n\n\n");
+                    break ;
+
+
+        
+                default:
+                    printf("Saisie invalide \n\n\n");
+                    break;
 
 
 
 
-        } 
+            } 
 
 
-    } while(a != 5) ;
+        } while(a != 5) ;
+
+
+    }
 
 
 
@@ -135,11 +147,11 @@ void menunote(Eleve eleve[]) {
 
 void menusupp(Eleve eleve[]) {
     
-    int a ;
+    int a, b ;
 
     do {
 
-        printf("1. Supprimer un élève \n");
+        printf("\n\n\n1. Supprimer un élève \n");
         printf("2. Supprimer tous les élèves \n");
         printf("3. Quitter \n\n\n");
 
@@ -151,7 +163,10 @@ void menusupp(Eleve eleve[]) {
         switch (a) {
         
             case 1:
-                suppeleve(eleve) ;
+                b = recheleve(eleve) ;
+                if(b != -1) {
+                    suppeleve(eleve , b) ;
+                }
                 break;
 
 
