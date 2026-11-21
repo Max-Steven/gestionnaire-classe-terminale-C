@@ -40,7 +40,7 @@ INFORMATIONS ET RECOMMANDATIONS
 - Il est possible d'enregistrer 4 notes : deux notes d'interrogation, une note de semi-devoir et une note de devoir
 - Aucune note enregistrée ne doit etre égale à zéro. Si une note est égale à zéro lors d'un affichage, cela signifie qu'elle n'a pas encore été ajoutée
 - La moyenne des interrogations est égale à la somme des notes d'interrogation divisée par 2
-- La moyenne pour une matière est égale à la somme de la note du devoir et de la moyenne partielle divisée par 2. La moyenne partielle est égale à la somme de la note du semi-devoir et de la moyenne des interrogations divisée pae 2
+- La moyenne pour une matière est égale à la somme de la note du devoir et de la moyenne partielle divisée par 2; la moyenne partielle étant égale à la somme de la note du semi-devoir et de la moyenne des interrogations divisée pae 2
 - La moyenne générale est égale au quotient de la somme des moyennes par matiére, chacune multipliée par son coefficient, par la somme des coefficients (ici égale à 22)
 - Le classement des élèves se fait par rapport à la moyenne générale
 - La recherche par identifiant donne le nom, les prénoms et les notes de l'élève
