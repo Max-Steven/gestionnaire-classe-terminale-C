@@ -56,7 +56,7 @@ INFORMATIONS ET RECOMMANDATIONS
     - Français : 2
     - Histoire-Géographie : 2
     - Anglais : 2
-    - Philosophie : 2  \n\n\n
+    - Philosophie : 2 
     - Sport : 1  
 
 
