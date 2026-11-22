@@ -1,6 +1,8 @@
 GESTIONNAIRE D'UNE CLASSE DE TERMINALE SÉRIE SCIENTIFIQUE (SÉRIE C) BÉNINOISE
 
-Ce projet est une application de langage C permettant de gérer les notes d'une classe béninoise de terminale série C
+Ce projet est une application réalisée entièrement en langage C, et permettant de gérer les notes des élèves d'une classe béninoise de Terminale Série C.
+
+Au cours de mon année de Terminale Série C, j'ai remarqué que les moyennes de tous les élèves n'etaient pas calculées à la main par les professeurs comme dans mes anciens collèges, mais plutot par un logiciel. Ce logiciel prenait en paramètre les notes des élèves, calculait les moyennes des élèves et les classait suivant ces moyennes. Mon objectif ici est de reproduire au mieux ce logiciel pour une classe béninoise de Terminale Série C dans le but d'aider certains collèges béninois qui, faute de ressources financières, n'ont pas accès à ces technologies.
 
 
 
@@ -44,6 +46,8 @@ INFORMATIONS ET RECOMMANDATIONS
 - La moyenne générale est égale au quotient de la somme des moyennes par matiére, chacune multipliée par son coefficient, par la somme des coefficients (ici égale à 22)
 - Le classement des élèves se fait par rapport à la moyenne générale
 - La recherche par identifiant donne le nom, les prénoms et les notes de l'élève
+- Il faut impérativement quitter le système à travers le menu du programme pour que les informations enregistrées soient sauvegardées
+- Une fois que vous entrez dans le menu "Gérer les notes et moyennes" , il vous sera demandé d'entrer l'identifiant d'un élève. Toutes les actions ou modifications qui seront effectuées dans ce menu seront donc faites pour cet élève tant que vous ne serez pas revenu au menu principal.
 - La recherche par nom donne l'identifiant de l'élève
 - Les coefficients pour les matières sont :
     - Mathématiques : 6
@@ -52,8 +56,8 @@ INFORMATIONS ET RECOMMANDATIONS
     - Français : 2
     - Histoire-Géographie : 2
     - Anglais : 2
-    - Philosophie : 2
-    - Sport : 1
+    - Philosophie : 2  \n\n\n
+    - Sport : 1  
 
 
 
