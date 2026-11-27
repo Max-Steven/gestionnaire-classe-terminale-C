@@ -11,11 +11,11 @@ void menueleve(Eleve eleve[]) {
     int a ;
 
     do {
-        printf("\n\n\n1. Ajouter un élève \n");
+        printf("\n\n\n\033[34m1. Ajouter un élève \n");
         printf("2. Compter les élèves \n");
         printf("3. Rechercher un élève \n");
         printf("4. Afficher tous les élèves \n");
-        printf("5. Quitter \n\n\n");
+        printf("\033[33m5. Quitter \033[0m\n\n\n");
 
         printf("Tapez le numéro de l'action à effectuer \n");
         scanf("%d",&a);
@@ -80,11 +80,11 @@ void menunote(Eleve eleve[]) {
 
 
         do {
-            printf("\n\n\n1. Ajouter une note \n");
+            printf("\n\n\n\033[34m1. Ajouter une note \n");
             printf("2. Afficher la moyenne des interrogations \n");
             printf("3. Afficher la moyenne dans la matière \n");
-            printf("4. Afficher la moyenne générale \n");
-            printf("5. Quitter \n");
+            printf("4. Afficher la moyenne générale \033[0m\n");
+            printf("\033[33m5. Quitter \033[0m \n\n");
 
 
             
@@ -151,9 +151,9 @@ void menusupp(Eleve eleve[]) {
 
     do {
 
-        printf("\n\n\n1. Supprimer un élève \n");
+        printf("\n\n\n\033[31m1. Supprimer un élève \n");
         printf("2. Supprimer tous les élèves \n");
-        printf("3. Quitter \n\n\n");
+        printf("\033[33m3. Quitter \033[0m\n\n\n");
 
         printf("Tapez le numéro de l'action à effectuer \n");
         scanf("%d",&a);

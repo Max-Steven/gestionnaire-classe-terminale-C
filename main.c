@@ -26,16 +26,16 @@ int main() {
     do {
 
 
-        printf("\n\n\n===================================================================== \n");
-        printf("CLASSE DE TERMINALE SÉRIE C \n");
-        printf("===================================================================== \n\n\n");
+        printf("\n\n\n\033[32m===================================================================== \n");
+        printf("                  CLASSE DE TERMINALE SÉRIE C \n");
+        printf("===================================================================== \033[0m\n\n\n");
 
 
-        printf("1. Gérer les élèves \n");
+        printf("\033[34m1. Gérer les élèves \n");
         printf("2. Gérer les notes et moyennes \n");
-        printf("3. Classement des élèves \n");
-        printf("4. Suppression \n");
-        printf("5. Quitter \n\n\n");
+        printf("3. Classement des élèves \033[0m \n");
+        printf("\033[31m4. Suppression \n");
+        printf("\033[33m5. Quitter \033[0m \n\n\n");
 
         printf("Tapez le numéro de l'action à effectuer \n");
         scanf("%d",&b);

@@ -93,7 +93,7 @@ void ajouteleve(Eleve eleve[]) {
 
         if(searchid(eleve , a) == 1  || a == 0) {
             do {
-                printf("Cet identifiant existe déjà ou ne peut pas être utilisé \n");
+                printf("\033[31mCet identifiant existe déjà ou ne peut pas être utilisé \033[0m \n");
                 printf("Veuillez entrer l'identifiant de l'élève \n");
                 scanf("%d",&a) ;
                 viderbuffer() ;
@@ -169,7 +169,7 @@ void ajoutnote(Eleve eleve[] , int a) {
         
     do {
 
-        printf("\n\n1. Mathématiques \n");
+        printf("\n\n\033[34m1. Mathématiques \n");
         printf("2. Physique, Chimie et Technologie \n");
         printf("3. Sciences de la Vie et de la Terre \n");
         printf("4. Français \n");
@@ -177,10 +177,10 @@ void ajoutnote(Eleve eleve[] , int a) {
         printf("6. Anglais \n");
         printf("7. Philosophie \n");
         printf("8. Sport \n");
-        printf("9. Quitter \n\n\n");
+        printf("\033[33m9. Quitter \033[0m\n\n\n");
             
 
-        printf("Tapez le numéro de la matière dont vous souhaitez ajouter une note ou tapez \"9\" pour quitter \n");
+        printf("Tapez le numéro de la matière dont vous souhaitez ajouter une note ou tapez \033[33m9\033[0m pour quitter \n");
         scanf("%d",&e);
         viderbuffer() ;
 
@@ -193,12 +193,12 @@ void ajoutnote(Eleve eleve[] , int a) {
 
                 do {
 
-                    printf("\n\nMathématiques \n\n");
-                    printf("1. Note de l'interrogation 1 \n");
+                    printf("\n\n\033[32mMathématiques \n\n");
+                    printf("\033[34m1. Note de l'interrogation 1 \n");
                     printf("2. Note de l'interrogation 2 \n");
                     printf("3. Note du semi-devoir \n");
                     printf("4. Note du devoir \n");
-                    printf("5. Quitter \n\n");
+                    printf("\033[33m5. Quitter \033[0m\n\n");
 
                     printf("Tapez le numéro de l'action à effectuer \n");
                     scanf("%d",&f);
@@ -297,12 +297,12 @@ void ajoutnote(Eleve eleve[] , int a) {
             case 2: /*pct*/
 
                 do {
-                    printf("\n\nPhysique, Chimie et Technologie \n\n");
-                    printf("1. Note de l'interrogation 1 \n");
+                    printf("\n\n\033[32mPhysique, Chimie et Technologie \n\n");
+                    printf("\033[34m1. Note de l'interrogation 1 \n");
                     printf("2. Note de l'interrogation 2 \n");
                     printf("3. Note du semi-devoir \n");
                     printf("4. Note du devoir \n");
-                    printf("5. Quitter \n\n");
+                    printf("\033[33m5. Quitter \033[0m \n\n");
 
                     printf("Tapez le numéro de l'action à effectuer \n");
                     scanf("%d",&g);
@@ -405,12 +405,12 @@ void ajoutnote(Eleve eleve[] , int a) {
 
                 do {
 
-                    printf("\n\nSciences de la Vie et de la Terre \n\n");
-                    printf("1. Note de l'interrogation 1 \n");
+                    printf("\n\n\033[32mSciences de la Vie et de la Terre \n\n");
+                    printf("\033[34m1. Note de l'interrogation 1 \n");
                     printf("2. Note de l'interrogation 2 \n");
                     printf("3. Note du semi-devoir \n");
                     printf("4. Note du devoir \n");
-                    printf("5. Quitter \n\n");
+                    printf("\033[33m5. Quitter \033[0m\n\n");
 
                     printf("Tapez le numéro de l'action à effectuer \n");
                     scanf("%d",&h);
@@ -509,12 +509,12 @@ void ajoutnote(Eleve eleve[] , int a) {
             case 4: /*français*/
 
                 do {
-                    printf("\n\nFrançais \n\n");
-                    printf("1. Note de l'interrogation 1 \n");
+                    printf("\n\n\033[32mFrançais \n\n");
+                    printf("\033[34m1. Note de l'interrogation 1 \n");
                     printf("2. Note de l'interrogation 2 \n");
                     printf("3. Note du semi-devoir \n");
                     printf("4. Note du devoir \n");
-                    printf("5. Quitter \n\n");
+                    printf("\033[33m5. Quitter \033[0m \n\n");
 
                     printf("Tapez le numéro de l'action à effectuer \n");
                     scanf("%d",&i);
@@ -614,12 +614,12 @@ void ajoutnote(Eleve eleve[] , int a) {
             case 5: /*histgeo*/
 
                 do {
-                    printf("\n\nHistoire et Géographie \n\n");
-                    printf("1. Note de l'interrogation 1 \n");
+                    printf("\n\n\033[32mHistoire et Géographie \n\n");
+                    printf("\033[34m1. Note de l'interrogation 1 \n");
                     printf("2. Note de l'interrogation 2 \n");
                     printf("3. Note du semi-devoir \n");
                     printf("4. Note du devoir \n");
-                    printf("5. Quitter \n\n");
+                    printf("\033[33m5. Quitter \033[0m \n\n");
 
                     printf("Tapez le numéro de l'action à effectuer \n");
                     scanf("%d",&j);
@@ -718,12 +718,12 @@ void ajoutnote(Eleve eleve[] , int a) {
             case 6: /*anglais*/
 
                 do {
-                    printf("\n\nAnglais \n\n");
-                    printf("1. Note de l'interrogation 1 \n");
+                    printf("\n\n\033[32mAnglais \n\n");
+                    printf("\033[34m1. Note de l'interrogation 1 \n");
                     printf("2. Note de l'interrogation 2 \n");
                     printf("3. Note du semi-devoir \n");
                     printf("4. Note du devoir \n");
-                    printf("5. Quitter \n\n");
+                    printf("\033[33m5. Quitter \033[0m \n\n");
 
                     printf("Tapez le numéro de l'action à effectuer \n");
                     scanf("%d",&k);
@@ -824,12 +824,12 @@ void ajoutnote(Eleve eleve[] , int a) {
             case 7: /*philosophie*/
 
                 do {
-                    printf("\n\nPhilosophie \n\n");
-                    printf("1. Note de l'interrogation 1 \n");
+                    printf("\n\n\033[32mPhilosophie \n\n");
+                    printf("\033[34m1. Note de l'interrogation 1 \n");
                     printf("2. Note de l'interrogation 2 \n");
                     printf("3. Note du semi-devoir \n");
                     printf("4. Note du devoir \n");
-                    printf("5. Quitter \n\n");
+                    printf("\033[33m5. Quitter \033[0m \n\n");
 
                     printf("Tapez le numéro de l'action à effectuer \n");
                     scanf("%d",&l);
@@ -931,12 +931,12 @@ void ajoutnote(Eleve eleve[] , int a) {
             case 8: /*sport*/
 
                 do {
-                    printf("\n\nSport \n\n");
-                    printf("1. Note de l'interrogation 1 \n");
+                    printf("\n\n\033[32mSport \n\n");
+                    printf("\033[34m1. Note de l'interrogation 1 \n");
                     printf("2. Note de l'interrogation 2 \n");
                     printf("3. Note du semi-devoir \n");
                     printf("4. Note du devoir \n");
-                    printf("5. Quitter \n\n");
+                    printf("\033[33m5. Quitter \033[0m \n\n");
 
                     printf("Tapez le numéro de l'action à effectuer \n");
                     scanf("%d",&m);
@@ -1102,7 +1102,7 @@ void suppalleleve(Eleve eleve[]) {
     a = compteleve(eleve) ;
 
     printf("Souhaitez-vous vraiment supprimer tous les élèves enregistrés ? \n");
-    printf("Répondez par \"Oui\" ou par \"Non\" \n");
+    printf("Répondez par \033[32mOui\033[0m ou par \033[31mNon\033[0m \n");
     fgets(c,sizeof(c) ,stdin);
     c[strcspn(c,"\n")] = '\0' ;
 
@@ -1111,13 +1111,13 @@ void suppalleleve(Eleve eleve[]) {
             eleve[b].id = 0 ;
         }
 
-        printf("La suppression a bien été effectuée \n");
+        printf("\nLa suppression a bien été effectuée \n");
         
     }
 
 
     else {
-        printf("Aucune suppression n'a été effectuée \n") ;
+        printf("\nAucune suppression n'a été effectuée \n") ;
     }
 
     
@@ -1265,7 +1265,7 @@ int recheleve(Eleve eleve[]) {
     int c = compteleve(eleve) ;
 
     printf("Veuillez entrer l'identifiant de l'élève \n");
-    printf("Tapez \"-1\" pour quitter \n");
+    printf("Tapez \033[33m-1\033[0m pour quitter \n");
     scanf("%d",&a);
     viderbuffer() ;
 
@@ -1287,7 +1287,7 @@ int recheleve(Eleve eleve[]) {
                 }
 
                 else {
-                    printf("Cet identifiant n'existe pas \n\n");
+                    printf("\033[31mCet identifiant n'existe pas \033[0m \n\n");
                     printf("Veuillez entrer l'identifiant de l'élève \n");
                     printf("Tapez \"-1\" pour quitter \n");
                     scanf("%d",&a);
@@ -1333,14 +1333,14 @@ double moyinterro(Eleve eleve[] , int a) {
     double c ;
    
 
-    printf("\n\n1. Mathématiques \n");
+    printf("\n\n\033[34m1. Mathématiques \n");
     printf("2. Physique, Chimie et Technologie \n");
     printf("3. Sciences de la Vie et de la Terre \n");
     printf("4. Français \n");
     printf("5. Histoire et Géographie \n");
     printf("6. Anglais \n");
     printf("7. Philosophie \n");
-    printf("8. Sport \n\n\n");
+    printf("8. Sport \033[0m \n\n\n");
         
 
     printf("Tapez le numéro de la matière dont vous souhaitez avoir la moyenne interro \n");
@@ -1506,14 +1506,14 @@ double moymat(Eleve eleve[] , int a) {
     double c, d, e ;
     
 
-    printf("1. Mathématiques \n");
+    printf("\n\n\n\033[34m1. Mathématiques \n");
     printf("2. Physique, Chimie et Technologie \n");
     printf("3. Sciences de la Vie et de la Terre \n");
     printf("4. Français \n");
     printf("5. Histoire et Géographie \n");
     printf("6. Anglais \n");
     printf("7. Philosophie \n");
-    printf("8. Sport \n\n\n");
+    printf("8. Sport \033[0m \n\n\n");
         
 
     printf("Tapez le numéro de la matière dont vous souhaitez avoir la moyenne \n");
@@ -1877,10 +1877,10 @@ void classer(Eleve eleve[]) {
 
         for(f = 0 ; f < g ; f++) {
             printf("__________________________________________________________\n\n");
-            printf("Rang : %d \n", f+1);
-            printf("Nom et prénoms : %s %s \n", classe[f].nom, classe[f].prenom);
-            printf("Identifiant : %d \n", classe[f].id);
-            printf("Moyenne générale : %.2lf \n\n", moygen(classe , f));
+            printf("\033[35mRang :\033[0m %d \n", f+1);
+            printf("\033[35mNom et prénoms :\033[0m %s %s \n", classe[f].nom, classe[f].prenom);
+            printf("\033[35mIdentifiant :\033[0m %d \n", classe[f].id);
+            printf("\033[35mMoyenne générale :\033[0m %.2lf \n\n", moygen(classe , f));
             
 
         }
